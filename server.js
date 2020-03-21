@@ -2,7 +2,7 @@ var express = require('express');
 var cors = require('cors');
 var app = express();
 var router = express.Router();
-var upload = require('./app/config/multer.config.js');
+
  
 global.__basedir = __dirname;
  
