@@ -1,11 +1,11 @@
 //var stream = require('stream');
 
 const db = require('../config/db.config.js');
-const User = db.files;
+const User = db.users;
 
 
 exports.listAllUsers = (req, res) => {
-	File.findAll({attributes: ['id']}).then(files => {
-	  res.json(files);
+	User.findAll({attributes: ['id']}).then(users => {
+	  res.json(users);
 	});
 }
