@@ -34,6 +34,6 @@ router.get('/', (req, res)=>{
 	res.send('USERS')
 })
 
-router.get('/users/getall', userController.listAllUsers);
+router.get('/getall', userController.listAllUsers);
 
 module.exports = router;
