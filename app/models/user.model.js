@@ -6,21 +6,21 @@ module.exports = (sequelize, Sequelize) => {
 			autoIncrement: true,
 			primaryKey: true
 		  },
-		  username: {
+		username: {
 			type: Sequelize.STRING(35),
 			allowNull: false,
 			unique: true
 		  },
-		  useremail: {
+		useremail: {
 			type: Sequelize.STRING(35),
 			allowNull: false,
 			unique: true
 		  },
-		  userpassword: {
+		userpassword: {
 			type: Sequelize.STRING(20),
 			allowNull: false
 		  },
-		  blocked: {
+		blocked: {
 			type: Sequelize.BOOLEAN,
 			allowNull: false
 		  }
