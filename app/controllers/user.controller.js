@@ -12,8 +12,7 @@ exports.listAllUsers = (req, res) => {
 
 exports.searchUser = (req, res) =>{
 
-	File.findById(req.params.id).then(user => {
+	User.findById(req.params.id).then(user => {
 		res.json(user);
 	})
-
 }
