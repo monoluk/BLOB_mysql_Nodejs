@@ -21,6 +21,6 @@ module.exports = (app, router) => {
 	app.use('/',router);
  
 	app.use('*', (req,res) => {
-		res.sendFile(path + "404.html");
+		res.send("path not found");
 	});
 }
