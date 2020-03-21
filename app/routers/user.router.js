@@ -14,7 +14,7 @@ module.exports = (app, router) => {
 	
 	//app.post('/api/files/upload', upload.single("uploadfile"), fileController.uploadFile);
 	
-	app.get('/api/users/getall', userController.listAllFiles);
+	app.get('/api/users/getall', userController.listAllUsers);
 	
 	//app.get('/api/users/:id', userController.downloadFile);
 
