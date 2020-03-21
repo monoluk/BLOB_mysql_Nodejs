@@ -31,13 +31,13 @@
 const express = require('express');
 const router = express.Router();
 const fileController = require('../controllers/file.controller.js');
-var upload = require('./app/config/multer.config.js');
+var upload = require('../config/multer.config.js');
 
 
 router.get('/getall', fileController.listAllFiles);
 
 router.post('/upload', upload.single("uploadfile"), fileController.uploadFile);
 
-app.get('/searchfile/:id', fileController.downloadFile);
+router.get('/searchfile/:id', fileController.downloadFile);
 
 module.exports = router;
