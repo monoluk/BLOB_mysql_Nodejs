@@ -15,6 +15,8 @@ db.sequelize.sync({force: false}).then(() => {
 app.use(express.static('resources'));	
 
 require('./app/routers/file.router.js')(app, router, upload);
+require('./app/routers/user.router.js')(app, router);
+
  
 // Create a Server
 var server = app.listen(8081, function () {

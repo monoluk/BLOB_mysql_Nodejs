@@ -2,7 +2,7 @@
 
 module.exports = (app, router, upload) => {
 
-    const fileWorker = require('../controllers/file.controller.js');
+    const fileController = require('../controllers/file.controller.js');
 	
 	var path = __basedir + '/views/';
 	
@@ -15,11 +15,11 @@ module.exports = (app, router, upload) => {
 		res.sendFile(path + "index.html");
 	});
 	
-	app.post('/api/files/upload', upload.single("uploadfile"), fileWorker.uploadFile);
+	app.post('/api/files/upload', upload.single("uploadfile"), fileController.uploadFile);
 	
-	app.get('/api/files/getall', fileWorker.listAllFiles);
+	app.get('/api/files/getall', fileController.listAllFiles);
 	
-	app.get('/api/files/:id', fileWorker.downloadFile);
+	app.get('/api/files/:id', fileController.downloadFile);
 
 	app.use('/',router);
  
