@@ -10,7 +10,7 @@ exports.uploadItem = (req, res) => {
 		name: req.file.originalname,
 		data: req.file.buffer
 	}).then(() => {
-		res.send('item uploaded successfully! -> itemname = ' + req.item.originalname);
+		res.send('item uploaded successfully! -> itemname = ' + req.file.originalname);
 	})
 }
 
