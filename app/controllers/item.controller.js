@@ -4,6 +4,7 @@ const db = require('../config/db.config.js');
 const item = db.items;
 
 exports.uploadItem = (req, res) => {
+	console.log(req.item)
 	item.create({
 		type: req.item.mimetype,
 		name: req.item.originalname,
