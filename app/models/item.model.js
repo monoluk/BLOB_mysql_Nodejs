@@ -1,5 +1,5 @@
 module.exports = (sequelize, Sequelize) => {
-	const File = sequelize.define('file', {
+	const Item = sequelize.define('item', {
 	  type: {
 		type: Sequelize.STRING
 	  },
@@ -11,5 +11,5 @@ module.exports = (sequelize, Sequelize) => {
 	  }
 	});
 	
-	return File;
+	return Item;
 }
