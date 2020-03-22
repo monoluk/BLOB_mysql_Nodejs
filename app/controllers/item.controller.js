@@ -4,11 +4,11 @@ const db = require('../config/db.config.js');
 const item = db.items;
 
 exports.uploadItem = (req, res) => {
-	console.log(req.item)
+	console.log(req.file)
 	item.create({
-		type: req.item.mimetype,
-		name: req.item.originalname,
-		data: req.item.buffer
+		type: req.file.mimetype,
+		name: req.file.originalname,
+		data: req.file.buffer
 	}).then(() => {
 		res.send('item uploaded successfully! -> itemname = ' + req.item.originalname);
 	})
